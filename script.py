@@ -6,7 +6,9 @@ from os.path import isfile, join
 
 
 prs = Presentation()
-src = '.\\Add here\\'
+
+# insert .mp3 and .png files in src folder
+src = '.\\src\\'
 fileNames = [f for f in listdir(src) if isfile(join(src, f))]
 
 # print files sorted
