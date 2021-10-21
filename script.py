@@ -17,7 +17,7 @@ fileNames = [f for f in listdir(src) if isfile(join(src, f))]
 size = len(fileNames)
 for i in range(0, size, 2):
 
-    # chose a slide layout to use 
+    # chose a slide layout to use
     slide_register = prs.slide_layouts[6]
     slide = prs.slides.add_slide(slide_register)
 
@@ -35,10 +35,9 @@ for i in range(0, size, 2):
 
     img_path = src + fileNames[i + 1]
 
-    # location of the image in the slide
-    left = top = Inches(0)
+    # add_picture(image_file, left, top, width, height)
+    pic = slide.shapes.add_picture(img_path, Inches(
+        0.5), Inches(1.75), width=Inches(9), height=Inches(5))
 
-    pic = slide.shapes.add_picture(img_path, left, top)
-    
-
-prs.save("Lecture.pptx")
+# save file as example.pptx
+prs.save("example.pptx")

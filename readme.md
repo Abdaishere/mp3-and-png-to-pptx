@@ -1,5 +1,5 @@
-# audio and image to pptx
-convert audio and image into pptx file
+# .mp3 and .png into .pptx
+convert .mp3 and .png into pptx slide
 
 ## Installation
 
@@ -9,6 +9,7 @@ install [python-pptx](https://pypi.org/project/python-pptx/) to install pptx.
 pip install python-pptx
 ```
 python 3.8.8
+
 ## Usage
 
 ```python
@@ -19,7 +20,8 @@ from os.path import isfile, join
 
 prs = Presentation()
 
-# insert .mp3 and .png files in src folder
+# insert .mp3 and .png files in src folder 
+# the .mp3 file must be the same name as the .png file
 src = '.\\src\\'
 fileNames = [f for f in listdir(src) if isfile(join(src, f))]
 ```
