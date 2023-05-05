@@ -21,7 +21,7 @@ from os.path import isfile, join
 prs = Presentation()
 
 # insert .mp3 and .png files in src folder 
-# the .mp3 file must be the same name as the .png file
+# the .mp3 file must be the same order name as the .png file
 src = '.\\src\\'
 fileNames = [f for f in listdir(src) if isfile(join(src, f))]
 ```
